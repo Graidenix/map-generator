@@ -1,0 +1,35 @@
+.map-wrapper {
+  border: 1px solid #ccc;
+  width: 640px;
+  height: 480px;
+  display: grid;
+  grid-template-columns: repeat(20, 32px);
+  grid-template-rows: repeat(15, 32px);
+}
+
+.cell {
+  width: 32px;
+  height: 32px;
+  background-image: url('/tiles.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.cell-x {
+  background-position: 0 0;
+}
+
+.cell-d {
+  background-position: -256px -512px;
+  background-color: #6f5756;
+}
+.cell-e {
+  background-position: -224px -512px;
+  background-color: #6f5756;
+}
+.cell- {
+  background-position: 0 -480px;
+}
+.cell-1 {background-position: -32px -480px;}
+.cell-2 {background-position: -64px -480px;}
+.cell-3 {background-position: -96px -480px;}
