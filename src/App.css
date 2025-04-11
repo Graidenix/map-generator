@@ -1,35 +1,73 @@
-.map-wrapper {
-  border: 1px solid #ccc;
-  width: 640px;
-  height: 480px;
-  display: grid;
-  grid-template-columns: repeat(20, 32px);
-  grid-template-rows: repeat(15, 32px);
+/* General Layout */
+:root {
+  --border: #c1c1c1;
+  --radius: 4px;
+}
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.cell {
-  width: 32px;
-  height: 32px;
-  background-image: url('/tiles.png');
-  background-repeat: no-repeat;
-  background-position: 0 0;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.cell-x {
-  background-position: 0 0;
+
+/* Accordion Steps */
+.step {
+  border: 1px solid var(--border, #ccc);
+  border-radius: var(--radius, 4px);
+  margin-bottom: 1rem;
+  overflow: hidden;
 }
 
-.cell-d {
-  background-position: -256px -512px;
-  background-color: #6f5756;
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
 }
-.cell-e {
-  background-position: -224px -512px;
-  background-color: #6f5756;
+
+.step-header h2 {
+  margin: 0;
+  font-size: 1rem;
 }
-.cell- {
-  background-position: 0 -480px;
+
+.step-content {
+  padding: 1rem;
 }
-.cell-1 {background-position: -32px -480px;}
-.cell-2 {background-position: -64px -480px;}
-.cell-3 {background-position: -96px -480px;}
+
+/* Legend and Preview */
+.legend-canvas,
+.preview-canvas {
+  display: block;
+  max-width: 100%;
+  flex-grow: 0;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.legend-canvas {
+  background-color: black;
+}
+
+/* Map Configuration */
+textarea {
+  width: 100%;
+  height: 150px;
+  font-family: monospace;
+  resize: vertical;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem;
+
+}
+
+.download-button {
+  display: block;
+  margin: 1rem auto;
+}
