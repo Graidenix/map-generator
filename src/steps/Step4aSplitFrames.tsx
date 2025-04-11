@@ -50,7 +50,7 @@ const Step4aSplitFrames: React.FC<Step4aSplitFramesProps> = ({ sprite, frameSize
 
     return (
         <div>
-            <button onClick={handleDownload}>Download Frames as ZIP</button>
+            <button className="button is-primary" onClick={handleDownload}>Download Frames as ZIP</button>
             <canvas ref={canvasRef} width={frameSize.width} height={frameSize.height} style={{ display: 'none' }} />
         </div>
     );
