@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import { CHARACTERS } from '../constants';
+import {CHARACTERS} from '../constants';
 
 interface LegendProps {
     sprite: HTMLImageElement;
@@ -8,7 +8,7 @@ interface LegendProps {
     onCharacterClick: (char: string) => void; // Callback for character click
 }
 
-const Legend: React.FC<LegendProps> = ({ sprite, frameSize, isFrameTransparent, onCharacterClick }) => {
+const Legend: React.FC<LegendProps> = ({sprite, frameSize, isFrameTransparent, onCharacterClick}) => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [clickableZones, setClickableZones] = useState<
         { x: number; y: number; width: number; height: number; char: string }[]
@@ -111,14 +111,17 @@ const Legend: React.FC<LegendProps> = ({ sprite, frameSize, isFrameTransparent, 
     };
 
     return (
-        <div>
-            <p><strong>Legend:</strong></p>
-            <canvas
-                ref={canvasRef}
-                className="legend-canvas"
-                onClick={handleCanvasClick} // Add click handler
-            />
-        </div>
+        <article className="message">
+            <div className="message-header">
+                <strong>Legend:</strong>
+            </div>
+            <div className="legend-canvas message-body">
+                <canvas
+                    ref={canvasRef}
+                    onClick={handleCanvasClick} // Add click handler
+                />
+            </div>
+        </article>
     );
 };
 

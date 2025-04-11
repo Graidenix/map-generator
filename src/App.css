@@ -41,7 +41,6 @@ body {
 }
 
 /* Legend and Preview */
-.legend-canvas,
 .preview-canvas {
   display: block;
   max-width: 100%;
@@ -53,6 +52,8 @@ body {
 
 .legend-canvas {
   background-color: black;
+  margin: 0;
+  width: 100%;
 }
 
 /* Map Configuration */
