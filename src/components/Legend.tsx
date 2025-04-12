@@ -18,7 +18,7 @@ const Legend: React.FC<LegendProps> = ({ charToImageMap, onCharacterClick }) => 
                     onClick={() => onCharacterClick(char)} // Trigger callback with clicked character
                 >
                     <img src={image.src} alt={`Frame for ${char}`} className="legend__icon" />
-                    <span>{char}</span>
+                    <strong className="legend__char">{char}</strong>
                 </button>
             ))}
         </div>
